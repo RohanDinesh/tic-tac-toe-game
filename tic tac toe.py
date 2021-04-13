@@ -6,7 +6,7 @@ board = [
     ["_", "_", "_"]
 ]
 user = True #True-->user is 'x'  False-->user is 'o'
-count=1
+count=1 
 
 def print_board(boardd):
     for i in range(3):
@@ -115,8 +115,7 @@ def check_diagonal(user, board):
 
 
 while count<=9:
-    print('\n')
-
+    print()
     user_input = input("Please enter a position between 1 to 9 or enter 'q' to quit:")
     if quit(user_input):
         break
@@ -135,11 +134,11 @@ while count<=9:
     add_to_board(coords, board, active_user)
 
     if iswin(active_user, board):
-        print(f"{active_user.upper()} won! Congratulations :)")
+        print(f"{active_user.upper()} won! Congratulations :)\n")
         break
 
     if count == 9:
-        print("Match tied!\nWell played, both of you!")
+        print("Match tied!\nWell played, both of you!\n")
 
     count += 1
     user = not user
